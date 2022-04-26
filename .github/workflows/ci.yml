@@ -4,7 +4,11 @@ on:
 jobs:
   Build:
     runs-on: ubuntu-18.04
+    env:
+      TERM: dumb
     steps:
+      - name: CHeckout
+        uses: actions/checkout@v2
       - uses: joschi/setup-jdk@v2.3.0
         with:
           java-version: 15
